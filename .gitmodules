@@ -1,0 +1,6 @@
+[submodule "packages/bootstrap"]
+	path = packages/bootstrap
+	url = https://dasdeck@github.com/d3ck-net/bootstrap.git
+[submodule "packages/adminTheme"]
+	path = packages/adminTheme
+	url = https://dasdeck@github.com/d3ck-net/adminTheme.git

@@ -1,0 +1,63 @@
+<template name="cv">
+
+    <!-- Page Heading -->
+    <div class="row">
+        <!--<div class="col-md-1">-->
+
+        <!--</div>-->
+
+        <h1 class="page-header">
+            Jan Manuel Schlieper
+        </h1>
+
+        <div class="col-md-2 leftCol">
+            {{>letterHead}}
+        </div>
+        <div class="col-md-10">
+
+
+            <ul class="cv">
+                {{#each data}}
+                    <li>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h2 class="panel-title"><i class="fa fa-clock-o fa-fw"></i>{{date from}} - {{date to}}</h2>
+                                <h3>{{company}}</h3>
+                            </div>
+                            <div class="panel-body">
+                                <h4><i class="fa fa-cube fa-fw"></i> {{position}}</h4>
+                                <div class="col-md-6">
+                                    <h5> <i class="fa fa-fw fa-tasks"></i> tasks</h5>
+                                    <div class="list-group">
+                                        {{#each tasks}}
+                                            <a href="#" class="list-group-item">
+                                                <!--<span class="badge">just now</span>-->
+                                                {{desc}}
+                                            </a>
+                                        {{/each}}
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <h5><i class="fa fa-fw fa-cogs"></i> technologies</h5>
+                                    <div class="list-group">
+                                        {{#each tech}}
+                                            <a href="#" class="list-group-item">
+                                                <span class="badge">{{weight}}</span>
+                                                {{name}}
+                                            </a>
+                                        {{/each}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <!-- /.row -->
+
+
+</template>
